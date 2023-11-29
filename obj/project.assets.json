@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pedro\\Documents\\Estudos\\Estudo C#\\Estudo C#.csproj",
+      "projectUniqueName": "C:\\Users\\pedro\\Documents\\Estudos\\Estudo C#\\Curso-DIO-C\\Estudo C#.csproj",
       "projectName": "Estudo C#",
-      "projectPath": "C:\\Users\\pedro\\Documents\\Estudos\\Estudo C#\\Estudo C#.csproj",
+      "projectPath": "C:\\Users\\pedro\\Documents\\Estudos\\Estudo C#\\Curso-DIO-C\\Estudo C#.csproj",
       "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pedro\\Documents\\Estudos\\Estudo C#\\obj\\",
+      "outputPath": "C:\\Users\\pedro\\Documents\\Estudos\\Estudo C#\\Curso-DIO-C\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config"
