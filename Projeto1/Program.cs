@@ -4,6 +4,45 @@
 
 
 
+int numero = 5;
+int contador = 0;
+
+
+
+while (contador <= 10)
+{
+    Console.WriteLine($"{contador}º Execução:{numero} x {contador} = {numero * contador}");
+    contador++;
+}
+
+
+
+
+
+
+
+
+// int numero = 5;
+
+// for (int contador = 0; contador <= 10; contador++)
+// {
+//     Console.WriteLine($"{numero} x {contador} = {numero * contador}");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 //Calculadora calc = new Calculadora();
 // calc.Somar(3, 5);
