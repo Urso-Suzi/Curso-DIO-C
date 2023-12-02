@@ -9,19 +9,33 @@ listaString.Add("BA");
 listaString.Add("MG");
 
 
-Console.WriteLine("Percorrendo com For");
-for(int i = 1; i < listaString.Count; i++)
-{
-    Console.WriteLine($"Posição N° {i} - {listaString[i]}");
-}
+Console.WriteLine($" Itens na minha lista: {listaString.Count} - Capacidade: {listaString.Capacity}");
 
-Console.WriteLine("Percorrendo com ForEach");
-int contadorForEach = 0;
-foreach(string item in listaString)
-{
-    Console.WriteLine($"Posição N° {contadorForEach} - {item}");
-    contadorForEach++;
-}
+listaString.Add("SC");
+
+Console.WriteLine($" Itens na minha lista: {listaString.Count} - Capacidade: {listaString.Capacity}");
+
+listaString.Remove("MG");
+
+Console.WriteLine($" Itens na minha lista: {listaString.Count} - Capacidade: {listaString.Capacity}");
+
+
+
+
+
+// Console.WriteLine("Percorrendo com For");
+// for(int i = 1; i < listaString.Count; i++)
+// {
+//     Console.WriteLine($"Posição N° {i} - {listaString[i]}");
+// }
+
+// Console.WriteLine("Percorrendo com ForEach");
+// int contadorForEach = 0;
+// foreach(string item in listaString)
+// {
+//     Console.WriteLine($"Posição N° {contadorForEach} - {item}");
+//     contadorForEach++;
+// }
 
 
 
