@@ -13,7 +13,8 @@ namespace ExemploExplorando.Models
         public void AdicionarAluno(Pessoa aluno)
         {
             Alunos.Add(aluno);
-           Console.WriteLine($"{Alunos.Count()} Aluno(os) adicionado(os).");
+
+           Console.WriteLine($"Aluno: {Alunos.Last().NomeCompleto} adicionado.");
             
         }
 
@@ -32,10 +33,14 @@ namespace ExemploExplorando.Models
 
         public void ListarAlunos() 
         {
-            Console.WriteLine($"Alunos do Curso de: {Nome}");
-            foreach (Pessoa  aluno in Alunos)
+            Console.WriteLine($"Total de Alunos do Curso de: {Nome} : {Alunos.Count}");
+            
+            for (int count = 0; count < Alunos.Count; count++)
             {
-                Console.WriteLine(aluno.NomeCompleto);
+                
+                //string texto = "N° " + count + " - " + Alunos[count].NomeCompleto;
+                string texto = $"N° {count + 1} - {Alunos[count].NomeCompleto}";
+                Console.WriteLine(texto);
             }
         }
     }
