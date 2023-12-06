@@ -1,11 +1,19 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
 
+
+
+try 
+{
 string[] linhas = File.ReadAllLines("Arquivos/arquivo_Leitura.txt");
 
 foreach(string linha in linhas)
 {
     Console.WriteLine(linha);
+}
+} catch(Exception ex)
+{
+    Console.WriteLine($"ocorreu uma exceção, generica. {ex.Message}");
 }
 
 
