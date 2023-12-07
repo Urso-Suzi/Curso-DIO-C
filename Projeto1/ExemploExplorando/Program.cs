@@ -3,18 +3,80 @@ using System.Globalization;
 
 
 
-try 
-{
-string[] linhas = File.ReadAllLines("Arquivos/arquivo_Leitura.txt");
 
-foreach(string linha in linhas)
+Queue<int> fila = new Queue<int>();
+
+fila.Enqueue(2);
+fila.Enqueue(4);
+fila.Enqueue(6);
+fila.Enqueue(8);
+
+foreach (int item in fila) 
 {
-    Console.WriteLine(linha);
+        Console.WriteLine(item);
 }
-} catch(Exception ex)
-{
-    Console.WriteLine($"ocorreu uma exceção, generica. {ex.Message}");
-}
+
+fila.Dequeue();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// new ExemploExcecao().Metodo1();
+
+
+
+// try 
+// {
+// string[] linhas = File.ReadAllLines("Arquivos/arquivo_Leitura.txt");
+
+// foreach(string linha in linhas)
+// {
+//     Console.WriteLine(linha);
+// }
+// } catch(FileNotFoundException ex)
+// {
+//     Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Arquivo não encontrado. {ex.Message}");
+// }
+//  catch(DirectoryNotFoundException ex)
+// {
+//     Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Caminho não encontrado. {ex.Message}");
+// }
+//  catch(Exception ex)
+// {
+//     Console.WriteLine($"ocorreu uma exceção, generica. {ex.Message}");
+// }
+// finally
+// {
+//     Console.WriteLine("Chegou aqui!");
+// }
 
 
 
