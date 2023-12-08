@@ -13,7 +13,32 @@ foreach (var item in estados)
     Console.WriteLine($"Chave {item.Key}, Valor: {item.Value}");
 }
 
-//estados.Add("BA", "Bahia");
+estados.Remove("BA");
+estados["SP"] = "São Paulo - valor alterado";
+
+
+Console.WriteLine("-------------------------");
+
+foreach (var item in estados)
+{
+    Console.WriteLine($"Chave {item.Key}, Valor: {item.Value}");
+}
+
+string chave = "BA";
+Console.WriteLine($"Verificando o elemnto: {chave}");
+
+if (estados.ContainsKey(chave))
+{
+    Console.WriteLine($"Valor existente: {chave}");
+}
+else
+{
+    Console.WriteLine($"Valor não existe. É seguro adicionar a chave {chave}");
+}
+
+
+
+
 
 
 
