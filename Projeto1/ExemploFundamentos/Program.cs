@@ -1,23 +1,137 @@
 ﻿
 
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Pergunta ao usuário quantos jogos deseja adicionar:
+        int quantidadeJogos = int.Parse(Console.ReadLine());
+
+        // TODO: Inicializa os arrays com base na quantidade informada pelo usuário:
+        string [] nomesJogos = new string [quantidadeJogos];
+
+        // TODO: Crei um Loop para adicionar jogos conforme a quantidade especificada:
+       
+        for ( int i = 0; i < nomesJogos.Length; i++)
+        {
+            AdicionarJogo(i, nomesJogos);
+        }
+
+        //TODO: Chame a função AdicionarJogo para obter o nome do jogo e armazená-lo no array:
+       
+       
+
+        // Exibe o resumo da adição de jogos
+        ExibirResumoAdicaoJogos(quantidadeJogos, nomesJogos);
+    }
+
+    static void AdicionarJogo(int indice, string[] nomes)
+    {
+        // Entrada do nome do jogo
+        nomes[indice] = Console.ReadLine();
+    }
+
+     static void ExibirResumoAdicaoJogos(int quantidadeJogos, string[] nomes)
+     {
+          Console.WriteLine($"Foi adicionado '{quantidadeJogos}' Jogos: {string.Join(", ", nomes)} ao catalogo.");
+     }
+    
+ }
 
 
-List<string> listaString = new List<string>();
-
-listaString.Add("SP");
-listaString.Add("BA");
-listaString.Add("MG");
 
 
-Console.WriteLine($" Itens na minha lista: {listaString.Count} - Capacidade: {listaString.Capacity}");
 
-listaString.Add("SC");
 
-Console.WriteLine($" Itens na minha lista: {listaString.Count} - Capacidade: {listaString.Capacity}");
 
-listaString.Remove("MG");
 
-Console.WriteLine($" Itens na minha lista: {listaString.Count} - Capacidade: {listaString.Capacity}");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// using System;
+
+// class Program
+// {
+//     static void Main()
+//     {
+//     // Solicita ao usuário os limites inferiores e superiores
+//     int limiteInferior = int.Parse(Console.ReadLine());
+//     int limiteSuperior = int.Parse(Console.ReadLine());
+
+//     // Variável para acumular a soma dos números pares
+//     int somaPares = 0;
+
+//     // TODO: Crie um Loop para percorrer os números no intervalo
+//     // Lembre-se: O limiteSuperior deve ser menor ou igual a i;
+//     for (int i = limiteInferior; i <= limiteSuperior; i++)
+//   {
+//       if(i % 2 == 0) 
+//       {
+//         somaPares += i;  
+//       }
+//     }
+//     // TODO: Implemente o if para verificar se o número é par:
+        
+    
+//     // TODO: Crie o acumulador para a soma dos números pares:
+           
+    
+
+//     // Exibe o resultado
+//     Console.WriteLine($"A soma dos numeros pares de {limiteInferior} a {limiteSuperior} e: {somaPares}");
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// List<string> listaString = new List<string>();
+
+// listaString.Add("SP");
+// listaString.Add("BA");
+// listaString.Add("MG");
+
+
+// Console.WriteLine($" Itens na minha lista: {listaString.Count} - Capacidade: {listaString.Capacity}");
+
+// listaString.Add("SC");
+
+// Console.WriteLine($" Itens na minha lista: {listaString.Count} - Capacidade: {listaString.Capacity}");
+
+// listaString.Remove("MG");
+
+// Console.WriteLine($" Itens na minha lista: {listaString.Count} - Capacidade: {listaString.Capacity}");
 
 
 
