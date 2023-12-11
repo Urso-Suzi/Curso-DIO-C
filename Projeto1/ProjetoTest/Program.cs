@@ -1,7 +1,441 @@
-﻿using Estudo_C_.Models;
+﻿using System;
+
+class Personagem
+{
+    public string Nome { get; set; }
+    public int Mana { get; set; }
+
+    public Personagem(string nome, int mana)
+    {
+        Nome = nome;
+        Mana = mana;
+    }
+}
+
+class Subclasse : Personagem
+{
+    public int dano_base { get; set; }
+
+    public Subclasse(string nome, int mana, int danoBase) : base(nome, mana)
+    {
+        dano_base = danoBase;
+    }
+
+    public void calcular_dano()
+    {
+        Console.WriteLine(Nome + " atacou e causou " + dano_base * Mana + " de dano!");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+       
+       string nome = Console.ReadLine();
+       int mana = int.Parse(Console.ReadLine());
+       int dano = int.Parse(Console.ReadLine());
+    
+       Subclasse sub1 = new Subclasse(nome = nome, mana = mana, dano = dano);
+       sub1.calcular_dano();
+    }
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// using System;
+
+// class Personagem
+// {
+//     public string Nome { get; set; }
+//     public string Raca { get; set; }
+//     public string Classe { get; set; }
+//     public int Nivel { get; set; } = 1;
+//     public int Vida { get; set; } = 10;
+
+//     public Personagem(string nome, string raca, string classe)
+//     {
+//         Nome = nome;
+//         Raca = raca;
+//         Classe = classe;
+//     }
+
+//     public void exibir_status()
+//     {
+//         Console.WriteLine("Status:");
+//         Console.WriteLine($"Nome:{Nome}");
+//         Console.WriteLine($"Raça:{Raca}");
+//         Console.WriteLine($"Classe:{Classe}");
+//         Console.WriteLine($"Nível:{Nivel}");
+//         Console.WriteLine($"Vida:{Vida}");
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         string nome = Console.ReadLine();
+//         string raca = Console.ReadLine();
+//         string classe = Console.ReadLine();
+
+
+//         Personagem p1 = new Personagem(nome = nome, raca = raca, classe = classe);
+
+//         p1.exibir_status();
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// using System;
+// using System.Security.Cryptography.X509Certificates;
+
+// class Jogador
+// {
+//     public string Nome { get; set; }
+//     public string Nacionalidade { get; set; }
+//     public int Idade { get; set; }
+//     public string Posicao { get; set; }
+
+//     public void  novo()
+//     {
+//         Console.WriteLine("Jogador criado!");
+//         Console.WriteLine($"{Nome}");
+//         Console.WriteLine($"{Nacionalidade}");
+//         Console.WriteLine($"{Idade}");
+//         Console.WriteLine($"Posição: {Posicao}");
+        
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Jogador j1 = new Jogador();
+//         j1.Nome = Console.ReadLine();
+//         j1.Nacionalidade = Console.ReadLine();
+//         j1.Idade = int.Parse(Console.ReadLine());
+//         j1.Posicao = Console.ReadLine();
+
+//         j1.novo();
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// using System;
+
+// class Robo
+// {
+//     public int VelocidadeAtual { get; set; } = 0;
+//     public int VelocidadeMaxima { get; }
+//     public int VelocidadeMinima { get; }
+
+//     public Robo(int vmin, int vmax)
+//     {
+//         VelocidadeMinima = vmin;
+//         VelocidadeMaxima = vmax;
+//         VelocidadeAtual = vmin;
+//     }
+
+//     public void Acelerar()
+//     {
+//         if (VelocidadeAtual < VelocidadeMaxima)
+//         {
+//             VelocidadeAtual++;
+//         }
+//     }
+
+//     public void Desacelerar()
+//     {
+//         if (VelocidadeAtual > VelocidadeMinima)
+//         {
+//             VelocidadeAtual--;
+//         }
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//          string[] texto = Console.ReadLine().Split(" ");
+//          int n1 = int.Parse(texto[0]), n2 = int.Parse(texto[1]);
+//         string texto2 = Console.ReadLine();
+//         char[] vel = texto2.ToCharArray();
+        
+//          Robo r1 = new Robo(n1, n2);
+        
+
+//        foreach(char items in vel)
+//         {   
+//             string letra = items.ToString();
+           
+        
+//              if(letra == "A")
+//              {
+//                 r1.Acelerar();
+//             }
+//                else if (letra =="D")
+//             {
+//              r1.Desacelerar();
+//             }
+
+            
+           
+//         }
+        
+//          Console.WriteLine(r1.VelocidadeAtual);
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// using System;
+
+// class Robo
+// {
+//     public int VelocidadeAtual { get; set; } = 0;
+//     public int VelocidadeMaxima { get; }
+//     public int VelocidadeMinima { get; }
+
+//     public Robo(int vmin, int vmax)
+//     {
+//         VelocidadeMinima = vmin;
+//         VelocidadeMaxima = vmax;
+//         VelocidadeAtual = vmin;
+//     }
+
+//     public void Acelerar()
+//     {
+//         if (VelocidadeAtual < VelocidadeMaxima)
+//         {
+//             VelocidadeAtual++;
+//         }
+//     }
+
+//     public void Desacelerar()
+//     {
+//         if (VelocidadeAtual > VelocidadeMinima)
+//         {
+//             VelocidadeAtual--;
+//         }
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         string[] texto = Console.ReadLine().Split(" ");
+//         int n1 = int.Parse(texto[0]), n2 = int.Parse(texto[1]);
+//         string entrada = Console.ReadLine();
+//         var vel = entrada.ToList();
+        
+//         Robo r1 = new Robo(n1, n2);
+        
+//         foreach(var items in vel)
+//         {
+//            string letra = items.ToString();
+           
+//            if(letra == "A")
+//            {
+//               r1.Acelerar();
+//            }
+//            else if (letra =="D")
+//            {
+//              r1.Desacelerar();
+//            }
+           
+//         }
+        
+//         Console.WriteLine(r1.VelocidadeAtual);
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// using System;
+
+
+// class Pessoa
+// {
+ 
+//     public string nome {get; set; }
+//     public int idade {get; set; }
+
+//     public Pessoa(string n, int i)
+//     {
+//         nome = n;
+//         idade = i;
+//     }
+//     public void  GetNome()
+//     {
+
+//         Console.WriteLine(nome);
+//     }
+
+//     public void GetIdade()
+//     {
+//         Console.WriteLine(idade);
+//     }
+// }
+// class Program
+// {
+//     static void Main()
+//     {
+        
+//         string  nome = Console.ReadLine();
+//         int Idade = int.Parse(Console.ReadLine());
+
+//         Pessoa p1 = new Pessoa(nome, Idade);
+
+//         Console.WriteLine($"Nome:{p1.nome}, Idade:{p1.idade}");
+
+//     }
+// }
 
 
 

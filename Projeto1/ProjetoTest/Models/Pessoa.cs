@@ -7,10 +7,10 @@ namespace Estudo_C_.Models
 {
     public class Pessoa
     {   
-        public string Nome  { get; set; } = string.Empty;
+        public string Nome  { get; set; }
         public int Idade { get; set; } 
 
-        public string Cidade { get; set; } = string.Empty;
+        public string Cidade { get; set; }
 
         public void Apresentar() 
         {
