@@ -217,71 +217,71 @@ class Program
 
 
 
-// using System;
+using System;
 
-// class Robo
-// {
-//     public int VelocidadeAtual { get; set; } = 0;
-//     public int VelocidadeMaxima { get; }
-//     public int VelocidadeMinima { get; }
+class Robo
+{
+    public int VelocidadeAtual { get; set; } = 0;
+    public int VelocidadeMaxima { get; }
+    public int VelocidadeMinima { get; }
 
-//     public Robo(int vmin, int vmax)
-//     {
-//         VelocidadeMinima = vmin;
-//         VelocidadeMaxima = vmax;
-//         VelocidadeAtual = vmin;
-//     }
+    public Robo(int vmin, int vmax)
+    {
+        VelocidadeMinima = vmin;
+        VelocidadeMaxima = vmax;
+        VelocidadeAtual = vmin;
+    }
 
-//     public void Acelerar()
-//     {
-//         if (VelocidadeAtual < VelocidadeMaxima)
-//         {
-//             VelocidadeAtual++;
-//         }
-//     }
+    public void Acelerar()
+    {
+        if (VelocidadeAtual < VelocidadeMaxima)
+        {
+            VelocidadeAtual++;
+        }
+    }
 
-//     public void Desacelerar()
-//     {
-//         if (VelocidadeAtual > VelocidadeMinima)
-//         {
-//             VelocidadeAtual--;
-//         }
-//     }
-// }
+    public void Desacelerar()
+    {
+        if (VelocidadeAtual > VelocidadeMinima)
+        {
+            VelocidadeAtual--;
+        }
+    }
+}
 
-// class Program
-// {
-//     static void Main()
-//     {
-//          string[] texto = Console.ReadLine().Split(" ");
-//          int n1 = int.Parse(texto[0]), n2 = int.Parse(texto[1]);
-//         string texto2 = Console.ReadLine();
-//         char[] vel = texto2.ToCharArray();
+class Program
+{
+    static void Main()
+    {
+         string[] texto = Console.ReadLine().Split(" ");
+         int n1 = int.Parse(texto[0]), n2 = int.Parse(texto[1]);
+        string texto2 = Console.ReadLine();
+        char[] vel = texto2.ToCharArray();
         
-//          Robo r1 = new Robo(n1, n2);
+         Robo r1 = new Robo(n1, n2);
         
 
-//        foreach(char items in vel)
-//         {   
-//             string letra = items.ToString();
+       foreach(char items in vel)
+        {   
+            string letra = items.ToString();
            
         
-//              if(letra == "A")
-//              {
-//                 r1.Acelerar();
-//             }
-//                else if (letra =="D")
-//             {
-//              r1.Desacelerar();
-//             }
+             if(letra == "A")
+             {
+                r1.Acelerar();
+            }
+               else if (letra =="D")
+            {
+             r1.Desacelerar();
+            }
 
             
            
-//         }
+        }
         
-//          Console.WriteLine(r1.VelocidadeAtual);
-//     }
-// }
+         Console.WriteLine(r1.VelocidadeAtual);
+    }
+}
 
 
 
